@@ -21,6 +21,16 @@ function Home() {
         <FeatureCard title="Water Tracker" icon="💧" />
         <FeatureCard title="Health Journal" icon="📖" />
       </section>
+
+      <section className="about">
+        <h2>Why HerHealth?</h2>
+
+        <p>
+          HerHealth empowers women to monitor their wellness journey
+          through intuitive tracking tools, personalized insights,
+          and daily health tracking.
+        </p>
+      </section>
     </>
   );
 }
