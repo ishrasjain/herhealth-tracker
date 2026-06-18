@@ -1,7 +1,7 @@
 function FeatureCard({ title, icon }) {
   return (
-    <div className="card">
-      <h2>{icon}</h2>
+    <div className="feature-card">
+      <div className="icon">{icon}</div>
       <h3>{title}</h3>
     </div>
   );

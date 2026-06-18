@@ -23,12 +23,14 @@ function Home() {
       </section>
 
       <section className="about">
-        <h2>Why HerHealth?</h2>
+        <h2>About HerHealth</h2>
 
         <p>
-          HerHealth empowers women to monitor their wellness journey
-          through intuitive tracking tools, personalized insights,
-          and daily health tracking.
+          HerHealth is a women's wellness platform designed to help users
+          track their menstrual cycles, monitor moods, manage hydration,
+          and maintain a personal health journal. Our goal is to empower
+          women with simple tools to better understand their health and
+          wellness journey.
         </p>
       </section>
     </>

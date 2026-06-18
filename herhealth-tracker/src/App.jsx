@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import PeriodTracker from "./pages/PeriodTracker";
 import Footer from "./components/Footer";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Navbar />
       <Home />
+      <PeriodTracker />
       <Footer />
     </>
   );
