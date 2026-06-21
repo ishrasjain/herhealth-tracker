@@ -102,6 +102,16 @@ function PeriodTracker() {
 
       <h3>July 2026</h3>
 
+      <div className="weekdays">
+  <span>Sun</span>
+  <span>Mon</span>
+  <span>Tue</span>
+  <span>Wed</span>
+  <span>Thu</span>
+  <span>Fri</span>
+  <span>Sat</span>
+</div>
+
       <div className="calendar-grid">
         {days.map((day) => (
           <div
@@ -120,44 +130,6 @@ function PeriodTracker() {
         ))}
       </div>
 
-      <h3>Symptoms Today</h3>
-
-      <div className="symptoms">
-        {symptomOptions.map(
-          (symptom) => (
-            <button
-              key={symptom}
-              className={
-                symptoms.includes(symptom)
-                  ? "symptom selected-symptom"
-                  : "symptom"
-              }
-              onClick={() =>
-                toggleSymptom(symptom)
-              }
-            >
-              {symptom}
-            </button>
-          )
-        )}
-      </div>
-
-      <h3>Selected Symptoms</h3>
-
-      <p>
-        {symptoms.length > 0
-          ? symptoms.join(", ")
-          : "No symptoms selected"}
-      </p>
-
-      <h3>Selected Period Days</h3>
-
-      <p>
-        {selectedDays.length > 0
-          ? selectedDays.join(", ")
-          : "No days selected"}
-      </p>
-
       <button
         onClick={calculateNextPeriod}
       >
@@ -170,6 +142,26 @@ function PeriodTracker() {
           <p>{nextPeriod}</p>
         </div>
       )}
+
+      <h3>Symptoms Today</h3>
+
+<div className="symptoms">
+  {symptomOptions.map((symptom) => (
+    <button
+      key={symptom}
+      className={
+        symptoms.includes(symptom)
+          ? "symptom selected-symptom"
+          : "symptom"
+      }
+      onClick={() =>
+        toggleSymptom(symptom)
+      }
+    >
+      {symptom}
+    </button>
+  ))}
+</div>
 
       <div className="info">
         <p>
