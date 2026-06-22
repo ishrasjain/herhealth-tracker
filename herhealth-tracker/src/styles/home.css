@@ -281,3 +281,49 @@ footer {
   font-weight: bold;
   color: #b8bfd8;
 }
+/* MOOD TRACKER */
+
+.mood-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.mood-btn {
+  width: 120px;
+  height: 120px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: #1d2740;
+  color: white;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mood-btn span {
+  font-size: 32px;
+}
+
+.mood-btn:hover {
+  transform: translateY(-5px);
+}
+
+.mood-selected {
+  background: #ff4d8d;
+}
+
+.mood-result {
+  margin-top: 40px;
+}
+
+.mood-result h3 {
+  margin-bottom: 10px;
+}

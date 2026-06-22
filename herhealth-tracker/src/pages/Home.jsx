@@ -16,10 +16,25 @@ function Home() {
       </section>
 
       <section className="features">
-        <FeatureCard title="Period Tracker" icon="📅" />
-        <FeatureCard title="Mood Tracker" icon="😊" />
-        <FeatureCard title="Water Tracker" icon="💧" />
-        <FeatureCard title="Health Journal" icon="📖" />
+        <FeatureCard
+          title="Period Tracker"
+          icon="📅"
+        />
+
+        <FeatureCard
+          title="Mood Tracker"
+          icon="😊"
+        />
+
+        <FeatureCard
+          title="Water Tracker"
+          icon="💧"
+        />
+
+        <FeatureCard
+          title="Health Journal"
+          icon="📖"
+        />
       </section>
 
       <section className="about">
