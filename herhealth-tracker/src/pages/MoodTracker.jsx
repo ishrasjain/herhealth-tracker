@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function MoodTracker() {
   const [selectedMood, setSelectedMood] = useState("");
+  const [history, setHistory] = useState([]);
 
   const moods = [
     { emoji: "😊", name: "Happy" },
@@ -11,6 +12,44 @@ function MoodTracker() {
     { emoji: "😡", name: "Angry" },
     { emoji: "😴", name: "Tired" },
   ];
+
+  useEffect(() => {
+    const savedHistory = localStorage.getItem("moodHistory");
+
+    if (savedHistory) {
+      setHistory(JSON.parse(savedHistory));
+    }
+  }, []);
+
+  const saveMood = (moodObj) => {
+    setSelectedMood(moodObj.name);
+
+    const now = new Date();
+
+    const newEntry = {
+      mood: moodObj.name,
+      emoji: moodObj.emoji,
+      date: now.toLocaleDateString(),
+      time: now.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
+    };
+
+    const updatedHistory = [newEntry, ...history];
+
+    setHistory(updatedHistory);
+
+    localStorage.setItem(
+      "moodHistory",
+      JSON.stringify(updatedHistory)
+    );
+  };
+
+  const clearHistory = () => {
+    setHistory([]);
+    localStorage.removeItem("moodHistory");
+  };
 
   return (
     <section className="tracker">
@@ -27,7 +66,7 @@ function MoodTracker() {
                 ? "mood-selected"
                 : ""
             }`}
-            onClick={() => setSelectedMood(mood.name)}
+            onClick={() => saveMood(mood)}
           >
             <span>{mood.emoji}</span>
             <br />
@@ -40,6 +79,31 @@ function MoodTracker() {
         <div className="mood-result">
           <h3>Today's Mood</h3>
           <p>{selectedMood}</p>
+        </div>
+      )}
+
+      {history.length > 0 && (
+        <div className="mood-history">
+          <h3>Mood History</h3>
+
+          {history.map((item, index) => (
+            <div
+              key={index}
+              className="history-card"
+            >
+              <h4>
+                {item.emoji} {item.mood}
+              </h4>
+
+              <p>
+                {item.date} • {item.time}
+              </p>
+            </div>
+          ))}
+
+          <button onClick={clearHistory}>
+            Clear History
+          </button>
         </div>
       )}
     </section>

@@ -327,3 +327,68 @@ footer {
 .mood-result h3 {
   margin-bottom: 10px;
 }
+
+.mood-history {
+  margin-top: 40px;
+}
+
+.mood-history p {
+  margin: 8px 0;
+  color: #b8bfd8;
+}
+
+.mood-history {
+  margin-top: 40px;
+}
+
+.history-card {
+  background: #1d2740;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 10px auto;
+  max-width: 400px;
+}
+
+.history-card h4 {
+  margin: 0;
+}
+
+.history-card p {
+  color: #b8bfd8;
+}
+
+/* WATER TRACKER */
+
+.water-buttons {
+  margin-top: 20px;
+}
+
+.water-buttons button {
+  margin: 10px;
+}
+
+.progress-bar {
+  width: 400px;
+  max-width: 90%;
+  height: 25px;
+
+  background: #1d2740;
+
+  border-radius: 20px;
+
+  margin: 30px auto;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #00c6ff,
+    #0072ff
+  );
+
+  transition: 0.3s;
+}
