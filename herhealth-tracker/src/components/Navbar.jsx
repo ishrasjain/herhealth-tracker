@@ -1,10 +1,13 @@
 import "../styles/navbar.css";
+
 function Navbar() {
   return (
-    <nav>
-      <h2>HerHealth</h2>
+    <nav className="navbar">
+      <div className="logo">
+        🌸 HerHealth
+      </div>
 
-      <ul>
+      <ul className="nav-links">
         <li>Home</li>
         <li>Features</li>
         <li>About</li>

@@ -1,8 +1,10 @@
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 import PeriodTracker from "./pages/PeriodTracker";
 import MoodTracker from "./pages/MoodTracker";
 import WaterTracker from "./pages/WaterTracker";
+import Journal from "./pages/Journal";
 import Footer from "./components/Footer";
 
 function App() {
@@ -12,11 +14,15 @@ function App() {
 
       <Home />
 
+      <Dashboard />
+
       <PeriodTracker />
 
       <MoodTracker />
 
       <WaterTracker />
+
+      <Journal />
 
       <Footer />
     </>

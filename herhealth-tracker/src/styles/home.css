@@ -37,8 +37,7 @@ body {
 
   background: linear-gradient(
     135deg,
-    #ff4d8d,
-    #c44cff
+    #ff4d8d
   );
 
   color: white;
@@ -69,7 +68,7 @@ body {
   width: 280px;
   height: 180px;
 
-  background: #1d2740;
+  background: #ff4d8d;
   border-radius: 20px;
 
   display: flex;
@@ -167,7 +166,7 @@ body {
   width: 70px;
   height: 70px;
 
-  background: #1d2740;
+  background: #ff4d8d;;
 
   display: flex;
   justify-content: center;
@@ -246,7 +245,7 @@ body {
 
   cursor: pointer;
 
-  background: #1d2740;
+  background: #ff4d8d;
   color: white;
 
   transition: 0.3s;
@@ -298,7 +297,7 @@ footer {
   border: none;
   border-radius: 15px;
 
-  background: #1d2740;
+  background: #dd31b2;
   color: white;
 
   font-size: 18px;
@@ -342,8 +341,7 @@ footer {
 }
 
 .history-card {
-  background: #1d2740;
-  padding: 15px;
+  background: #ff4d8d;
   border-radius: 12px;
   margin: 10px auto;
   max-width: 400px;
@@ -372,7 +370,7 @@ footer {
   max-width: 90%;
   height: 25px;
 
-  background: #1d2740;
+  background: #ff4d8d;
 
   border-radius: 20px;
 
@@ -391,4 +389,57 @@ footer {
   );
 
   transition: 0.3s;
+}
+
+/* JOURNAL */
+
+.journal-input {
+  width: 700px;
+  max-width: 90%;
+  margin-top: 20px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: #ff4d8d;
+  color: white;
+
+  font-size: 16px;
+
+  resize: none;
+}
+
+.journal-history {
+  margin-top: 40px;
+}
+
+.journal-card {
+  width: 700px;
+  max-width: 90%;
+
+  margin: 20px auto;
+
+    
+  background: #ff4d8d;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  text-align: left;
+}
+
+.journal-card h4 {
+  margin-bottom: 10px;
+  color: #ff8eb5;
+}
+
+.journal-card p {
+  line-height: 1.7;
+  color: #ddd;
+}
+
+.delete-btn {
+  margin-top: 15px;
 }
